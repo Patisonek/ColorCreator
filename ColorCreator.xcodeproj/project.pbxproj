@@ -12,6 +12,7 @@
 		844CCBAD1FC2EFFC007474B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844CCBAB1FC2EFFC007474B1 /* Main.storyboard */; };
 		844CCBAF1FC2EFFC007474B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844CCBAE1FC2EFFC007474B1 /* Assets.xcassets */; };
 		844CCBB21FC2EFFC007474B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844CCBB01FC2EFFC007474B1 /* LaunchScreen.storyboard */; };
+		84FA65FB1FCEB83800D46D76 /* UIColor+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA65FA1FCEB83800D46D76 /* UIColor+RandomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		844CCBAE1FC2EFFC007474B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844CCBB11FC2EFFC007474B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844CCBB31FC2EFFC007474B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FA65FA1FCEB83800D46D76 /* UIColor+RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RandomColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		844CCBA61FC2EFFC007474B1 /* ColorCreator */ = {
 			isa = PBXGroup;
 			children = (
+				84FA65F91FCEB66400D46D76 /* Extensions */,
 				844CCBA71FC2EFFC007474B1 /* AppDelegate.swift */,
 				844CCBA91FC2EFFC007474B1 /* ViewController.swift */,
 				844CCBAB1FC2EFFC007474B1 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				844CCBB31FC2EFFC007474B1 /* Info.plist */,
 			);
 			path = ColorCreator;
+			sourceTree = "<group>";
+		};
+		84FA65F91FCEB66400D46D76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84FA65FA1FCEB83800D46D76 /* UIColor+RandomColor.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844CCBAA1FC2EFFC007474B1 /* ViewController.swift in Sources */,
+				84FA65FB1FCEB83800D46D76 /* UIColor+RandomColor.swift in Sources */,
 				844CCBA81FC2EFFC007474B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +329,7 @@
 				844CCBB81FC2EFFC007474B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
