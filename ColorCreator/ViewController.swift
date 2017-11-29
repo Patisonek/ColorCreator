@@ -9,6 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet var previewContainer: UIView!
+    
+    @IBAction func actionRandomButton(_ sender: Any) {
+        
+        previewContainer.backgroundColor = UIColor.randomColor()
+        
+    }
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
