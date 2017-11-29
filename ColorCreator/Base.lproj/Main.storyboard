@@ -25,14 +25,23 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qye-xY-fdU">
                                 <rect key="frame" x="64" y="70" width="247" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.99910074472427368" green="0.23513257503509521" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="actionSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LZn-I4-on7"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lzw-hB-GaE">
                                 <rect key="frame" x="64" y="150" width="247" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.2109682559967041" green="0.88686221837997437" blue="0.0589161217212677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="actionSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="a9T-y7-mNI"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-wW-qVW">
                                 <rect key="frame" x="64" y="230" width="247" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.055443987250328064" green="0.52921169996261597" blue="0.886310875415802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="actionSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cfb-tQ-GDy"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2de-Fz-bG4">
                                 <rect key="frame" x="172.5" y="36" width="30" height="24"/>
@@ -94,7 +103,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueSlider" destination="mrG-wW-qVW" id="qNh-qf-vqT"/>
+                        <outlet property="greenSlider" destination="Lzw-hB-GaE" id="6J3-jS-QnI"/>
                         <outlet property="previewContainer" destination="8bC-Xf-vdC" id="BVx-U4-eJz"/>
+                        <outlet property="redSlider" destination="qye-xY-fdU" id="ZGM-uh-Mfe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
