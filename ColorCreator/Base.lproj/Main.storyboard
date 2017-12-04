@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1X0-YM-6Kj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Zm-3u-2nG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,10 +62,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nF-7f-VEN">
-                                <rect key="frame" x="36" y="312" width="303" height="335"/>
+                                <rect key="frame" x="36" y="312" width="303" height="286"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SD-GP-o1A">
-                                        <rect key="frame" x="123" y="152" width="57" height="30"/>
+                                        <rect key="frame" x="123" y="127.5" width="57" height="30"/>
                                         <state key="normal" title="Random"/>
                                         <connections>
                                             <action selector="actionRandomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAc-Fm-KMJ"/>
@@ -102,7 +102,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Lzw-hB-GaE" secondAttribute="trailing" constant="50" id="yfw-XK-ghV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Generator" id="Jwd-fA-fnv"/>
+                    <navigationItem key="navigationItem" title="Generator" id="Jwd-fA-fnv">
+                        <barButtonItem key="rightBarButtonItem" title="Zapisz" id="mTh-9f-AfW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="T8i-9I-tTr" kind="show" id="i4Y-H7-TY7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="blueSlider" destination="mrG-wW-qVW" id="qNh-qf-vqT"/>
                         <outlet property="greenSlider" destination="Lzw-hB-GaE" id="6J3-jS-QnI"/>
@@ -112,12 +119,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="43.628185907046479"/>
+            <point key="canvasLocation" x="1903.2" y="43.628185907046479"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Zapisz Kolor-->
+        <scene sceneID="gqo-gk-2er">
+            <objects>
+                <viewController id="T8i-9I-tTr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c20-nT-BGe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yvi-xq-LT0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gMT-u3-4Tm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zapisz Kolor" id="NTG-Lp-gvc">
+                        <barButtonItem key="backBarButtonItem" title="Generator" id="dh5-j1-7SW">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCS-gQ-qyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2780" y="43.628185907046479"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="tgh-2i-obr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1X0-YM-6Kj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zcU-A7-X7n"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="I5D-am-cbs">
@@ -131,7 +162,66 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaU-Yd-CYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="964" y="43.628185907046479"/>
+        </scene>
+        <!--Lista Kolorów-->
+        <scene sceneID="Zh3-ac-8yw">
+            <objects>
+                <viewController id="cPu-8K-zn2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bzs-g9-A3d"/>
+                        <viewControllerLayoutGuide type="bottom" id="sst-kU-GSJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0kV-g7-LoC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lista Kolorów" id="aiv-e5-xXX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIG-P1-Flb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903.2" y="830.73463268365822"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nhq-Dz-RCe">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9Zm-3u-2nG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9Q0-wy-ZET">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1X0-YM-6Kj" kind="relationship" relationship="viewControllers" id="ft3-Fm-Cud"/>
+                        <segue destination="3am-YT-hga" kind="relationship" relationship="viewControllers" id="3ho-LU-OwW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRZ-Ir-M0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="24.800000000000001" y="43.628185907046479"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="hDO-ng-gKO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3am-YT-hga" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="loX-wP-Xwo"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BV9-T0-YBI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cPu-8K-zn2" kind="relationship" relationship="rootViewController" id="odJ-A4-67p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMg-G4-LGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="830.73463268365822"/>
+        </scene>
     </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
