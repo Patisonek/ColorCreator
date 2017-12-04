@@ -13,7 +13,7 @@
         <!--Generator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorCreator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EditColorViewController" customModule="ColorCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -64,9 +64,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nF-7f-VEN">
                                 <rect key="frame" x="36" y="312" width="303" height="286"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SD-GP-o1A">
-                                        <rect key="frame" x="123" y="127.5" width="57" height="30"/>
-                                        <state key="normal" title="Random"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SD-GP-o1A">
+                                        <rect key="frame" x="116.5" y="126.5" width="71" height="33"/>
+                                        <state key="normal" image="loop copy"/>
                                         <connections>
                                             <action selector="actionRandomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAc-Fm-KMJ"/>
                                         </connections>
@@ -124,7 +124,7 @@
         <!--Zapisz Kolor-->
         <scene sceneID="gqo-gk-2er">
             <objects>
-                <viewController id="T8i-9I-tTr" sceneMemberID="viewController">
+                <viewController id="T8i-9I-tTr" customClass="SaveColorViewController" customModule="ColorCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c20-nT-BGe"/>
                         <viewControllerLayoutGuide type="bottom" id="Yvi-xq-LT0"/>
@@ -144,11 +144,11 @@
             </objects>
             <point key="canvasLocation" x="2780" y="43.628185907046479"/>
         </scene>
-        <!--Item-->
+        <!--Generator-->
         <scene sceneID="tgh-2i-obr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1X0-YM-6Kj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zcU-A7-X7n"/>
+                    <tabBarItem key="tabBarItem" title="Generator" image="generator-icon" id="zcU-A7-X7n"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="I5D-am-cbs">
@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="964" y="43.628185907046479"/>
         </scene>
-        <!--Lista Kolorów-->
+        <!--Lista Kolorow-->
         <scene sceneID="Zh3-ac-8yw">
             <objects>
-                <viewController id="cPu-8K-zn2" sceneMemberID="viewController">
+                <viewController title="Lista Kolorow" id="cPu-8K-zn2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bzs-g9-A3d"/>
                         <viewControllerLayoutGuide type="bottom" id="sst-kU-GSJ"/>
@@ -183,13 +183,14 @@
             </objects>
             <point key="canvasLocation" x="1903.2" y="830.73463268365822"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="nhq-Dz-RCe">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9Zm-3u-2nG" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9Zm-3u-2nG" customClass="TabBarViewController" customModule="ColorCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="9Q0-wy-ZET">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="9Q0-wy-ZET">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -202,11 +203,11 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="43.628185907046479"/>
         </scene>
-        <!--Item-->
+        <!--Lista Kolorow-->
         <scene sceneID="hDO-ng-gKO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3am-YT-hga" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="loX-wP-Xwo"/>
+                    <tabBarItem key="tabBarItem" title="Lista Kolorow" image="color-list-icon" id="loX-wP-Xwo"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BV9-T0-YBI">
@@ -223,5 +224,10 @@
             <point key="canvasLocation" x="964" y="830.73463268365822"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="color-list-icon" width="28" height="25"/>
+        <image name="generator-icon" width="26" height="27"/>
+        <image name="loop copy" width="71" height="33"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
