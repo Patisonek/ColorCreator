@@ -106,7 +106,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Zapisz" id="mTh-9f-AfW">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="T8i-9I-tTr" kind="show" id="i4Y-H7-TY7"/>
+                                <segue destination="T8i-9I-tTr" kind="show" identifier="save" id="i4Y-H7-TY7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

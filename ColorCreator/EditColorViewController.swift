@@ -43,6 +43,11 @@ class EditColorViewController: UIViewController {
         updateInterface()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        updateInterface()
+    }
     
     
     func updateInterface(){
@@ -59,18 +64,27 @@ class EditColorViewController: UIViewController {
         
     }
     
+    //Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let  indentifier = segue.identifier {
+            
+            if(indentifier == "save") {
+                
+                let viewCtrl = segue.destination as! SaveColorViewController
+                
+                viewCtrl.colorToSave = selectedColor
+                
+            }
+            
+        }
+    }
+    
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        updateInterface()
-    }
+   
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 
 }
