@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Zm-3u-2nG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Zm-3u-2nG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Generator-->
         <scene sceneID="tne-QT-ifu">
@@ -133,19 +138,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G91-om-in2">
-                                <rect key="frame" x="50" y="318" width="275" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwr-vG-uey" userLabel="Linia">
+                                <rect key="frame" x="50" y="342" width="275" height="2"/>
+                                <color key="backgroundColor" red="0.024045754224061966" green="0.0038432937581092119" blue="0.0036894457880407572" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wpisz nazwe Kolorou" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G91-om-in2">
+                                <rect key="frame" x="50" y="323" width="275" height="21"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="T8i-9I-tTr" id="cgd-ax-kfX"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUr-8Y-yw3">
-                                <rect key="frame" x="164" y="356" width="46" height="30"/>
+                                <rect key="frame" x="164" y="352" width="46" height="30"/>
                                 <state key="normal" title="Zapisz">
-                                    <color key="titleColor" red="0.0053126122802495956" green="0.50444966554641724" blue="0.99479109048843384" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="saveColor:" destination="T8i-9I-tTr" eventType="touchUpInside" id="7xy-qm-Iec"/>
@@ -155,10 +164,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wwr-vG-uey" firstAttribute="bottom" secondItem="G91-om-in2" secondAttribute="bottom" id="2tP-La-zRV"/>
+                            <constraint firstItem="wwr-vG-uey" firstAttribute="width" secondItem="G91-om-in2" secondAttribute="width" id="Iac-O7-BKA"/>
+                            <constraint firstItem="wwr-vG-uey" firstAttribute="top" secondItem="c20-nT-BGe" secondAttribute="bottom" constant="278" id="NU5-U8-Vpd"/>
                             <constraint firstItem="cUr-8Y-yw3" firstAttribute="top" secondItem="G91-om-in2" secondAttribute="bottom" constant="8" id="XA3-VO-dl8"/>
                             <constraint firstItem="G91-om-in2" firstAttribute="centerY" secondItem="gMT-u3-4Tm" secondAttribute="centerY" id="flt-F8-AoA"/>
                             <constraint firstItem="cUr-8Y-yw3" firstAttribute="centerX" secondItem="gMT-u3-4Tm" secondAttribute="centerX" id="hCO-tc-u8Q"/>
+                            <constraint firstItem="wwr-vG-uey" firstAttribute="centerX" secondItem="G91-om-in2" secondAttribute="centerX" id="rlg-x1-seb"/>
                             <constraint firstItem="G91-om-in2" firstAttribute="leading" secondItem="gMT-u3-4Tm" secondAttribute="leadingMargin" constant="34" id="t9Z-Wp-VpK"/>
+                            <constraint firstItem="wwr-vG-uey" firstAttribute="top" secondItem="G91-om-in2" secondAttribute="bottom" constant="-2" id="wmw-LR-xIM"/>
                             <constraint firstItem="G91-om-in2" firstAttribute="centerX" secondItem="cUr-8Y-yw3" secondAttribute="centerX" id="xj6-Hf-Hbo"/>
                         </constraints>
                     </view>
@@ -183,7 +197,7 @@
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="I5D-am-cbs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -242,7 +256,7 @@
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BV9-T0-YBI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
