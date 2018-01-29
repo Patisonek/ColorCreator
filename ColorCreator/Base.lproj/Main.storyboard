@@ -132,13 +132,44 @@
                     <view key="view" contentMode="scaleToFill" id="gMT-u3-4Tm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G91-om-in2">
+                                <rect key="frame" x="50" y="318" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="T8i-9I-tTr" id="cgd-ax-kfX"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUr-8Y-yw3">
+                                <rect key="frame" x="164" y="356" width="46" height="30"/>
+                                <state key="normal" title="Zapisz">
+                                    <color key="titleColor" red="0.0053126122802495956" green="0.50444966554641724" blue="0.99479109048843384" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveColor:" destination="T8i-9I-tTr" eventType="touchUpInside" id="7xy-qm-Iec"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cUr-8Y-yw3" firstAttribute="top" secondItem="G91-om-in2" secondAttribute="bottom" constant="8" id="XA3-VO-dl8"/>
+                            <constraint firstItem="G91-om-in2" firstAttribute="centerY" secondItem="gMT-u3-4Tm" secondAttribute="centerY" id="flt-F8-AoA"/>
+                            <constraint firstItem="cUr-8Y-yw3" firstAttribute="centerX" secondItem="gMT-u3-4Tm" secondAttribute="centerX" id="hCO-tc-u8Q"/>
+                            <constraint firstItem="G91-om-in2" firstAttribute="leading" secondItem="gMT-u3-4Tm" secondAttribute="leadingMargin" constant="34" id="t9Z-Wp-VpK"/>
+                            <constraint firstItem="G91-om-in2" firstAttribute="centerX" secondItem="cUr-8Y-yw3" secondAttribute="centerX" id="xj6-Hf-Hbo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zapisz Kolor" id="NTG-Lp-gvc">
                         <barButtonItem key="backBarButtonItem" title="Generator" id="dh5-j1-7SW">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="colorNameText" destination="G91-om-in2" id="aW0-du-cm7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCS-gQ-qyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
