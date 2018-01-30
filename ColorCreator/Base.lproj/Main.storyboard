@@ -138,14 +138,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwr-vG-uey" userLabel="Linia">
-                                <rect key="frame" x="50" y="342" width="275" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwr-vG-uey" userLabel="Linia">
+                                <rect key="frame" x="50" y="341" width="275" height="1"/>
                                 <color key="backgroundColor" red="0.024045754224061966" green="0.0038432937581092119" blue="0.0036894457880407572" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="SC3-WD-Beg"/>
+                                </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Wpisz nazwe Kolorou" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G91-om-in2">
-                                <rect key="frame" x="50" y="321" width="275" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wpisz nazwe Kolorou" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G91-om-in2">
+                                <rect key="frame" x="50" y="323" width="275" height="21"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -153,9 +154,8 @@
                                     <outlet property="delegate" destination="T8i-9I-tTr" id="cgd-ax-kfX"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUr-8Y-yw3">
-                                <rect key="frame" x="164" y="356" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUr-8Y-yw3">
+                                <rect key="frame" x="164" y="341" width="46" height="30"/>
                                 <state key="normal" title="Zapisz">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -166,6 +166,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G91-om-in2" firstAttribute="centerY" secondItem="gMT-u3-4Tm" secondAttribute="centerY" id="0l1-yt-8uv"/>
+                            <constraint firstAttribute="trailing" secondItem="G91-om-in2" secondAttribute="trailing" constant="50" id="APZ-23-XDD"/>
+                            <constraint firstItem="cUr-8Y-yw3" firstAttribute="top" secondItem="wwr-vG-uey" secondAttribute="top" id="Lef-yN-eAs"/>
+                            <constraint firstItem="G91-om-in2" firstAttribute="leading" secondItem="gMT-u3-4Tm" secondAttribute="leading" constant="50" id="MJT-NY-7uP"/>
+                            <constraint firstItem="cUr-8Y-yw3" firstAttribute="centerX" secondItem="gMT-u3-4Tm" secondAttribute="centerX" id="SfT-H6-a2k"/>
+                            <constraint firstItem="wwr-vG-uey" firstAttribute="centerX" secondItem="gMT-u3-4Tm" secondAttribute="centerX" id="ZAH-Wh-UtX"/>
+                            <constraint firstItem="wwr-vG-uey" firstAttribute="bottom" secondItem="G91-om-in2" secondAttribute="bottom" constant="-2" id="cpw-P3-cWG"/>
+                            <constraint firstItem="wwr-vG-uey" firstAttribute="width" secondItem="G91-om-in2" secondAttribute="width" id="g58-k3-tjD"/>
+                            <constraint firstItem="G91-om-in2" firstAttribute="centerX" secondItem="gMT-u3-4Tm" secondAttribute="centerX" id="gkc-Ux-zMd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zapisz Kolor" id="NTG-Lp-gvc">
                         <barButtonItem key="backBarButtonItem" title="Generator" id="dh5-j1-7SW">
