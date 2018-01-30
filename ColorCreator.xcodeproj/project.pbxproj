@@ -15,6 +15,7 @@
 		844CCBAD1FC2EFFC007474B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844CCBAB1FC2EFFC007474B1 /* Main.storyboard */; };
 		844CCBAF1FC2EFFC007474B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844CCBAE1FC2EFFC007474B1 /* Assets.xcassets */; };
 		844CCBB21FC2EFFC007474B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844CCBB01FC2EFFC007474B1 /* LaunchScreen.storyboard */; };
+		8450FAFC20209CD000AAA108 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FAFB20209CD000AAA108 /* GlobalConstants.swift */; };
 		84FA65FB1FCEB83800D46D76 /* UIColor+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA65FA1FCEB83800D46D76 /* UIColor+RandomColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		844CCBAE1FC2EFFC007474B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844CCBB11FC2EFFC007474B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844CCBB31FC2EFFC007474B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8450FAFB20209CD000AAA108 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		84FA65FA1FCEB83800D46D76 /* UIColor+RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RandomColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				844CCBAE1FC2EFFC007474B1 /* Assets.xcassets */,
 				844CCBB01FC2EFFC007474B1 /* LaunchScreen.storyboard */,
 				844CCBB31FC2EFFC007474B1 /* Info.plist */,
+				8450FAFB20209CD000AAA108 /* GlobalConstants.swift */,
 			);
 			path = ColorCreator;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				844CCBAA1FC2EFFC007474B1 /* EditColorViewController.swift in Sources */,
 				843F11751FD54D0A00B11EA8 /* SaveColorViewController.swift in Sources */,
 				84FA65FB1FCEB83800D46D76 /* UIColor+RandomColor.swift in Sources */,
+				8450FAFC20209CD000AAA108 /* GlobalConstants.swift in Sources */,
 				843F11791FD5710800B11EA8 /* TabBarViewController.swift in Sources */,
 				844CCBA81FC2EFFC007474B1 /* AppDelegate.swift in Sources */,
 			);

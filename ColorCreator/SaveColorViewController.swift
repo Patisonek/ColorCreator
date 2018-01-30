@@ -16,6 +16,22 @@ class SaveColorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var colorNameText: UITextField!
     @IBAction func saveColor(_ sender: Any) {
         self.colorNameText.resignFirstResponder()
+        
+        if(colorNameText.text == nil || colorNameText.text!.isEmpty){
+            let message = "Nie wpisales zadnego koloru"
+            let alert = UIAlertController(title: "Wpisz nazwę", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) ->Void in
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }else{
+            
+            
+            
+            
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
