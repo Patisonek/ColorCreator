@@ -40,7 +40,7 @@ class SaveColorViewController: UIViewController, UITextFieldDelegate {
             UserDefaults.standard.set(newColorNumber, forKey: LAST_COLOR_NUMBER_KEY)
             
             tabBarController?.selectedIndex = 1
-            
+            self.navigationController?.popViewController(animated: false)
             
         }
         
