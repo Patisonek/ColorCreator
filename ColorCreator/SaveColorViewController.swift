@@ -27,7 +27,19 @@ class SaveColorViewController: UIViewController, UITextFieldDelegate {
             
         }else{
             
+            var newColorNumber = 1
             
+            if UserDefaults.standard.object(forKey: LAST_COLOR_NUMBER_KEY) != nil
+            {
+            newColorNumber = UserDefaults.standard.integer(forKey: LAST_COLOR_NUMBER_KEY) + 1
+            
+            }
+            
+            UserDefaults.standard.setColor(color: colorToSave, forKey: "Color_\(newColorNumber)")
+            UserDefaults.standard.set(colorNameText.text, forKey: "Color_\(newColorNumber)_Name")
+            UserDefaults.standard.set(newColorNumber, forKey: LAST_COLOR_NUMBER_KEY)
+            
+            tabBarController?.selectedIndex = 1
             
             
         }
