@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		841AF366202333380050AF90 /* UserDefaults+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AF365202333380050AF90 /* UserDefaults+UIColor.swift */; };
+		841AF36920234C390050AF90 /* ColorCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AF36820234C390050AF90 /* ColorCellTableViewCell.swift */; };
 		843F11751FD54D0A00B11EA8 /* SaveColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F11741FD54D0A00B11EA8 /* SaveColorViewController.swift */; };
 		843F11771FD552F900B11EA8 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F11761FD552F900B11EA8 /* ColorListViewController.swift */; };
 		843F11791FD5710800B11EA8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F11781FD5710800B11EA8 /* TabBarViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		841AF365202333380050AF90 /* UserDefaults+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+UIColor.swift"; sourceTree = "<group>"; };
+		841AF36820234C390050AF90 /* ColorCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellTableViewCell.swift; sourceTree = "<group>"; };
 		843F11741FD54D0A00B11EA8 /* SaveColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveColorViewController.swift; sourceTree = "<group>"; };
 		843F11761FD552F900B11EA8 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
 		843F11781FD5710800B11EA8 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841AF36720234BDE0050AF90 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				841AF36820234C390050AF90 /* ColorCellTableViewCell.swift */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
 		843F11731FD54C3F00B11EA8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 		844CCBA61FC2EFFC007474B1 /* ColorCreator */ = {
 			isa = PBXGroup;
 			children = (
+				841AF36720234BDE0050AF90 /* TableCell */,
 				843F11731FD54C3F00B11EA8 /* ViewControllers */,
 				84FA65F91FCEB66400D46D76 /* Extensions */,
 				844CCBA71FC2EFFC007474B1 /* AppDelegate.swift */,
@@ -192,6 +203,7 @@
 				844CCBAA1FC2EFFC007474B1 /* EditColorViewController.swift in Sources */,
 				843F11751FD54D0A00B11EA8 /* SaveColorViewController.swift in Sources */,
 				84FA65FB1FCEB83800D46D76 /* UIColor+RandomColor.swift in Sources */,
+				841AF36920234C390050AF90 /* ColorCellTableViewCell.swift in Sources */,
 				841AF366202333380050AF90 /* UserDefaults+UIColor.swift in Sources */,
 				8450FAFC20209CD000AAA108 /* GlobalConstants.swift in Sources */,
 				843F11791FD5710800B11EA8 /* TabBarViewController.swift in Sources */,
