@@ -8,28 +8,76 @@
 
 import UIKit
 
-class ColorListViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class ColorListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var table: UITableView!
+    
+    var colors = [UIColor]()
+    var colorNames = [String]()
+    var colorNumbers = [Int]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        loadColors()
     }
+    
+    func loadColors(){
+        
+        colors.removeAll()
+        colorNames.removeAll()
+        colorNumbers.removeAll()
+        
+        if UserDefaults.standard.object(forKey: LAST_COLOR_NUMBER_KEY) != nil {
+            
+            let lastColorNumber = UserDefaults.standard.integer(forKey: LAST_COLOR_NUMBER_KEY)
+            
+            for i in 1...lastColorNumber {
+                if let color = UserDefaults.standard.colorForKey(key: "Color_\(i)"){
+                    let colorName = UserDefaults.standard.string(forKey: "Color_\(i)_Name")!
+                    
+                    colors.append(color)
+                    colorNames.append(colorName)
+                    colorNumbers.append(i)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+                }
+            }
+        }
+        //odswiezenie widoku tabeli
+        table.reloadData()
+        
+    }
+    
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return colors.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ColorCellTableViewCell
+        
+        cell.nameLabel.text = colorNames[colors.count - 1 - indexPath.row]
+        cell.backgroundColor = colors[colors.count - 1 - indexPath.row]
+        cell.valuesLabel.text = colors[colors.count - 1 - indexPath.row].rgbString()
+        
+        return cell
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
+    
+    
+    
+    
+   
 
 }

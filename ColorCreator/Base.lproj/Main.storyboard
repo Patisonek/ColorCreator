@@ -214,7 +214,7 @@
         <!--Lista Kolorow-->
         <scene sceneID="Zh3-ac-8yw">
             <objects>
-                <viewController title="Lista Kolorow" id="cPu-8K-zn2" sceneMemberID="viewController">
+                <viewController title="Lista Kolorow" id="cPu-8K-zn2" customClass="ColorListViewController" customModule="ColorCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bzs-g9-A3d"/>
                         <viewControllerLayoutGuide type="bottom" id="sst-kU-GSJ"/>
@@ -223,17 +223,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a8s-oO-4x8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a8s-oO-4x8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="13r-Ar-eI7">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="13r-Ar-eI7" customClass="ColorCellTableViewCell" customModule="ColorCreator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="13r-Ar-eI7" id="TdG-Ux-l5a">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnu-Zt-P3S">
+                                                    <rect key="frame" x="15" y="28" width="66" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.32321888081176864" green="0.33210375531623615" blue="0.33258384146341469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eer-0u-1oC">
+                                                    <rect key="frame" x="196" y="29" width="163" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.32321888081176864" green="0.33210375531623615" blue="0.33258384146341469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vnu-Zt-P3S" firstAttribute="leading" secondItem="TdG-Ux-l5a" secondAttribute="leadingMargin" id="4AI-7v-QPQ"/>
+                                                <constraint firstItem="eer-0u-1oC" firstAttribute="centerY" secondItem="TdG-Ux-l5a" secondAttribute="centerY" id="LLR-zp-rNH"/>
+                                                <constraint firstItem="eer-0u-1oC" firstAttribute="trailing" secondItem="TdG-Ux-l5a" secondAttribute="trailingMargin" constant="-1" id="mZq-ti-hvf"/>
+                                                <constraint firstItem="Vnu-Zt-P3S" firstAttribute="centerY" secondItem="TdG-Ux-l5a" secondAttribute="centerY" id="s88-Ae-JuI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.39197978377342224" green="0.81934267282485962" blue="0.072306118905544281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Vnu-Zt-P3S" id="hud-PS-UFK"/>
+                                            <outlet property="valuesLabel" destination="eer-0u-1oC" id="V4k-du-X8d"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -251,6 +281,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lista Kolorów" id="aiv-e5-xXX"/>
+                    <connections>
+                        <outlet property="table" destination="a8s-oO-4x8" id="hBS-a1-IqU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIG-P1-Flb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
