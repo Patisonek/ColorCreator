@@ -19,6 +19,7 @@
 		844CCBB21FC2EFFC007474B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844CCBB01FC2EFFC007474B1 /* LaunchScreen.storyboard */; };
 		8450FAFC20209CD000AAA108 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FAFB20209CD000AAA108 /* GlobalConstants.swift */; };
 		84FA65FB1FCEB83800D46D76 /* UIColor+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA65FA1FCEB83800D46D76 /* UIColor+RandomColor.swift */; };
+		84FCB89020248BFC00307BD9 /* UIColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB88F20248BFC00307BD9 /* UIColor+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		844CCBB31FC2EFFC007474B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8450FAFB20209CD000AAA108 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		84FA65FA1FCEB83800D46D76 /* UIColor+RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RandomColor.swift"; sourceTree = "<group>"; };
+		84FCB88F20248BFC00307BD9 /* UIColor+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				84FA65FA1FCEB83800D46D76 /* UIColor+RandomColor.swift */,
 				841AF365202333380050AF90 /* UserDefaults+UIColor.swift */,
+				84FCB88F20248BFC00307BD9 /* UIColor+String.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				844CCBAA1FC2EFFC007474B1 /* EditColorViewController.swift in Sources */,
 				843F11751FD54D0A00B11EA8 /* SaveColorViewController.swift in Sources */,
 				84FA65FB1FCEB83800D46D76 /* UIColor+RandomColor.swift in Sources */,
+				84FCB89020248BFC00307BD9 /* UIColor+String.swift in Sources */,
 				841AF36920234C390050AF90 /* ColorCellTableViewCell.swift in Sources */,
 				841AF366202333380050AF90 /* UserDefaults+UIColor.swift in Sources */,
 				8450FAFC20209CD000AAA108 /* GlobalConstants.swift in Sources */,
