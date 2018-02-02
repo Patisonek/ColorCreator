@@ -17,10 +17,18 @@ class ColorListViewController: UIViewController, UITableViewDelegate, UITableVie
     var colorNames = [String]()
     var colorNumbers = [Int]()
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         loadColors()
+    }
+    
+    override func viewDidLoad() {
+        table.tableFooterView = UIView(frame: CGRect.zero)
+        table.allowsSelection = false
+        
     }
     
     func loadColors(){
