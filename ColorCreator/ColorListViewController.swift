@@ -81,8 +81,25 @@ class ColorListViewController: UIViewController, UITableViewDelegate, UITableVie
     
 
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            let colorNumber = colorNumbers[indexPath.row]
+            UserDefaults.standard.removeObject(forKey: "Color_\(colorNumber)")
+            UserDefaults.standard.removeObject(forKey:"Color_\(colorNumber)_Name")
+            
+            colors.remove(at:indexPath.row)
+            colorNames.remove(at: indexPath.row)
+            colorNumbers.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        }
+    }
     
-    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Usuń"
+    }
     
     
     
