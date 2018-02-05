@@ -27,6 +27,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="view-bg-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Rlg-Sg-X5w">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qye-xY-fdU">
                                 <rect key="frame" x="64" y="114" width="247" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.99910074472427368" green="0.23513257503509521" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,19 +52,19 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2de-Fz-bG4">
-                                <rect key="frame" x="172.5" y="80" width="30" height="24"/>
+                                <rect key="frame" x="173" y="80" width="30" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.99910074472427368" green="0.23513257503509521" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YL2-Ta-I3W">
-                                <rect key="frame" x="164.5" y="160" width="47" height="24"/>
+                                <rect key="frame" x="164" y="160" width="47" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.39197978377342224" green="0.81934267282485962" blue="0.072306118905544281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhJ-1w-Jrr">
-                                <rect key="frame" x="170.5" y="240" width="34" height="24"/>
+                                <rect key="frame" x="171" y="240" width="34" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.055744990706443787" green="0.49643439054489136" blue="0.88677901029586792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -70,7 +73,7 @@
                                 <rect key="frame" x="36" y="312" width="303" height="286"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SD-GP-o1A">
-                                        <rect key="frame" x="116.5" y="126.5" width="71" height="33"/>
+                                        <rect key="frame" x="116" y="127" width="71" height="33"/>
                                         <state key="normal" image="loop copy"/>
                                         <connections>
                                             <action selector="actionRandomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAc-Fm-KMJ"/>
@@ -93,8 +96,10 @@
                             <constraint firstItem="Lzw-hB-GaE" firstAttribute="top" secondItem="qye-xY-fdU" secondAttribute="top" constant="80" id="9t9-wO-C7D"/>
                             <constraint firstItem="2de-Fz-bG4" firstAttribute="centerX" secondItem="qye-xY-fdU" secondAttribute="centerX" id="IfR-Bk-3iD"/>
                             <constraint firstItem="0nF-7f-VEN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Kgq-Mo-9qY"/>
+                            <constraint firstItem="Rlg-Sg-X5w" firstAttribute="centerX" secondItem="AhJ-1w-Jrr" secondAttribute="centerX" id="Kxw-kq-8YS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0nF-7f-VEN" secondAttribute="trailing" constant="20" id="N51-cV-9Mg"/>
                             <constraint firstItem="Lzw-hB-GaE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="O73-KF-wH9"/>
+                            <constraint firstItem="Rlg-Sg-X5w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oxs-XS-b0a"/>
                             <constraint firstItem="0nF-7f-VEN" firstAttribute="top" secondItem="mrG-wW-qVW" secondAttribute="bottom" constant="8" id="PdG-s2-DA0"/>
                             <constraint firstItem="qye-xY-fdU" firstAttribute="top" secondItem="2de-Fz-bG4" secondAttribute="bottom" constant="10" id="Upw-nu-MFG"/>
                             <constraint firstItem="qye-xY-fdU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="fsU-gB-0zY"/>
@@ -138,6 +143,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="view-bg-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="f7a-hn-SsS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwr-vG-uey" userLabel="Linia">
                                 <rect key="frame" x="50" y="341" width="275" height="1"/>
                                 <color key="backgroundColor" red="0.024045754224061966" green="0.0038432937581092119" blue="0.0036894457880407572" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
@@ -168,6 +176,8 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G91-om-in2" firstAttribute="centerY" secondItem="gMT-u3-4Tm" secondAttribute="centerY" id="0l1-yt-8uv"/>
+                            <constraint firstItem="f7a-hn-SsS" firstAttribute="centerX" secondItem="cUr-8Y-yw3" secondAttribute="centerX" id="8h9-al-YbE"/>
+                            <constraint firstItem="f7a-hn-SsS" firstAttribute="top" secondItem="c20-nT-BGe" secondAttribute="bottom" id="8z9-eb-jWw"/>
                             <constraint firstAttribute="trailing" secondItem="G91-om-in2" secondAttribute="trailing" constant="50" id="APZ-23-XDD"/>
                             <constraint firstItem="cUr-8Y-yw3" firstAttribute="top" secondItem="wwr-vG-uey" secondAttribute="top" id="Lef-yN-eAs"/>
                             <constraint firstItem="G91-om-in2" firstAttribute="leading" secondItem="gMT-u3-4Tm" secondAttribute="leading" constant="50" id="MJT-NY-7uP"/>
@@ -234,6 +244,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-bg-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="ZAD-1l-Vkr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnu-Zt-P3S">
                                                     <rect key="frame" x="15" y="28" width="66" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -252,10 +265,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ZAD-1l-Vkr" firstAttribute="centerY" secondItem="eer-0u-1oC" secondAttribute="centerY" id="0Gg-MZ-Poo"/>
                                                 <constraint firstItem="Vnu-Zt-P3S" firstAttribute="leading" secondItem="TdG-Ux-l5a" secondAttribute="leadingMargin" id="4AI-7v-QPQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZAD-1l-Vkr" secondAttribute="trailing" id="HA3-g7-b19"/>
                                                 <constraint firstItem="eer-0u-1oC" firstAttribute="centerY" secondItem="TdG-Ux-l5a" secondAttribute="centerY" id="LLR-zp-rNH"/>
+                                                <constraint firstItem="ZAD-1l-Vkr" firstAttribute="leading" secondItem="TdG-Ux-l5a" secondAttribute="leading" id="fZq-5X-nUV"/>
                                                 <constraint firstItem="eer-0u-1oC" firstAttribute="trailing" secondItem="TdG-Ux-l5a" secondAttribute="trailingMargin" constant="-1" id="mZq-ti-hvf"/>
                                                 <constraint firstItem="Vnu-Zt-P3S" firstAttribute="centerY" secondItem="TdG-Ux-l5a" secondAttribute="centerY" id="s88-Ae-JuI"/>
+                                                <constraint firstItem="ZAD-1l-Vkr" firstAttribute="top" secondItem="TdG-Ux-l5a" secondAttribute="top" id="vfQ-1q-gWX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.39197978377342224" green="0.81934267282485962" blue="0.072306118905544281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -331,9 +348,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cell-bg-gradient" width="375" height="31"/>
         <image name="color-list-icon" width="28" height="25"/>
         <image name="generator-icon" width="26" height="27"/>
         <image name="loop copy" width="71" height="33"/>
+        <image name="view-bg-gradient" width="375" height="554"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
